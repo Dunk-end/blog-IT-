@@ -1,0 +1,32 @@
+body {
+    background: #ffffff !important;
+    background: url("/images/download.jpg");
+}
+
+nav {
+    background: #70cde9 !important;
+}
+
+button {
+    background: #70cde9 !important;
+}
+
+.light-theme {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.dark-theme {
+    background: #4f4f4f !important;
+    color: #ffffff !important;
+
+}
+
+.aside {
+    margin: 10px 10px;
+}
+
+.dark-theme .form-control {
+    background: #4f4f4f !important;
+    color: #000000 !important;
+}
