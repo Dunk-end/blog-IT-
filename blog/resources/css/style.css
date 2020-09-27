@@ -1,14 +1,14 @@
 body {
     background: #ffffff !important;
-    background: url("/images/download.jpg");
 }
 
 nav {
-    background: #70cde9 !important;
+    background: #4a76a8 !important;
 }
 
 button {
-    background: #70cde9 !important;
+    background: #29496b !important;
+    color: #ffffff !important;
 }
 
 .light-theme {
@@ -29,4 +29,40 @@ button {
 .dark-theme .form-control {
     background: #4f4f4f !important;
     color: #000000 !important;
+}
+
+.light-theme nav {
+    background: #4a76a8;
+}
+
+.dark-theme nav {
+    background: #4a76a8;
+}
+
+.up-button {
+    color: #ffffff;
+}
+
+.dark-theme .alert-info {
+    background: #0c5460;
+    color: #d7d7d7;
+}
+
+.transition-fade {
+    transition: .6s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.down-button {
+    color: #ffffff !important;
+}
+
+img {
+    width: 20px;
+    height: 20px;
 }
