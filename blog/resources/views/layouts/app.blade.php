@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body class="page light-theme transition-fade" id="swup">
+<body class="page light-theme">
     @include('inc.header')
 
     <div class="container">
@@ -19,6 +19,9 @@
         <div class="row">
             <div class="col-8">
                 @yield('content')
+                <button class="up-button" type="button">
+                    <img src="https://img.icons8.com/fluent/48/000000/up.png" width="20" height="20" alt="">
+                </button>
             </div>
             <div class="col-4">
                 @include('inc.aside')
@@ -26,18 +29,22 @@
         </div>
     </div>
     @include('inc.footer')
-    <button class="up-button" type="button">
-        
-        <span class="visually-hidden"><img src="https://img.icons8.com/fluent/48/000000/up.png"/></span>
-    </button>
+
     <script>
 
+        let button = document.querySelector('.theme-button');
         let page = document.querySelector('.page');
-        let themeButton = document.querySelector('.theme-button');
 
-        themeButton.onclick = function () {
-            page.classList.toggle('light-theme');
+        if ('dark-theme' === localStorage.getItem('theme')) {
             page.classList.toggle('dark-theme');
+        }
+
+        button.onclick = function() {
+            if (page.classList.toggle('dark-theme')) {
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                localStorage.setItem('theme', 'light-theme')
+            }
         };
 
         let upButton = document.querySelector('.up-button');
@@ -58,7 +65,9 @@
 
         downButton.onclick = function() {
             window.scrollTo(0, 1000000000);
-        }
+        };
+
+
     </script>
 </body>
 </html>
